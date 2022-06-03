@@ -1,4 +1,5 @@
 import "./App.css";
+import Hello from "./components/Hello";
 
 function App() {
   const title = "Welcome to mawimbi restaurant";
@@ -10,6 +11,7 @@ function App() {
         <p>
           my name is {admin.name} and am the {admin.department} person
         </p>
+        <Hello />
       </div>
     </div>
   );

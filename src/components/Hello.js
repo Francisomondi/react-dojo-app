@@ -3,17 +3,30 @@ import { useState } from "react";
 
 const Hello = () => {
   const [counter, setCounter] = useState(0);
-  const displayMessage = () => {
-    return "this is the message";
-  };
+  const [display, setDisplay] = useState(false);
+
   const increment = () => {
     setCounter(counter + 1);
   };
 
+  if (display) {
+    return (
+      <div>
+        <h2>hello, this is a message</h2>
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <h2>hello, this is not a message</h2>
+      </div>
+    );
+  }
+
   return (
     <div>
       <div>
-        <h2>hello, {displayMessage()}</h2>
+        <h2>hello, this is not a message</h2>
       </div>
       <div>
         <h3>Counter value : {counter}</h3>

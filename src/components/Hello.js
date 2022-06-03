@@ -3,39 +3,15 @@ import { useState } from "react";
 
 const Hello = () => {
   const [counter, setCounter] = useState(0);
-  const [display, setDisplay] = useState(false);
+  const [display, setDisplay] = useState(true);
 
-  const increment = () => {
-    setCounter(counter + 1);
-  };
-
+  let output;
   if (display) {
-    return (
-      <div>
-        <h2>hello, this is a message</h2>
-      </div>
-    );
+    output = <h2>hello, this is a message</h2>;
   } else {
-    return (
-      <div>
-        <h2>hello, this is not a message</h2>
-      </div>
-    );
+    output = <h2>hello, this is not a message</h2>;
   }
-
-  return (
-    <div>
-      <div>
-        <h2>hello, this is not a message</h2>
-      </div>
-      <div>
-        <h3>Counter value : {counter}</h3>
-      </div>
-      <div>
-        <button onClick={increment}>Increment</button>
-      </div>
-    </div>
-  );
+  return <div>{output}</div>;
 };
 
 export default Hello;

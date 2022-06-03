@@ -9,8 +9,8 @@ function App() {
       <div className="content">
         <Hello />
         <Message />
-        <Profile name="francis" />
-        <Profile name="omondi" />
+        <Profile name="francis" lastname="ödero" />
+        <Profile name="omondi" lastname="John" />
       </div>
     </div>
   );

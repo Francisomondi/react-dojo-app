@@ -24,11 +24,17 @@ const Product = () => {
       id: 4,
       firstname: "salome",
       lastname: "muitaliano",
-      role: "Procuremets"
+      role: "Procurement"
     }
   ];
+  const fruits = ["banana", "oranges", "pineaple", "guava"];
+
+  const fruitlist = fruits.map((fruit, index) => <h3 key={index}>{fruit}</h3>);
+
   const productList = products.map(product => (
-    <h2 key={product.id}>{product.firstname}</h2>
+    <h2 key={product.id}>
+      {product.firstname} , role: {product.role}
+    </h2>
   ));
 
   return <div>{productList}</div>;
